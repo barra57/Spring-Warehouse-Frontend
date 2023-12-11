@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:whizware/view/example.dart';
 import 'package:whizware/view/warehouse/goods_list.dart';
 import 'package:whizware/view/warehouse/home.dart';
 import 'package:whizware/view/warehouse/incoming_delivery_page.dart';
@@ -22,8 +23,7 @@ class _DashboardState extends State<Dashboard> {
   int selected = 0;
   int _selectedMenu = 0;
   final List<Widget> _children = [
-    // GoodsList(),
-    IncomingTransferRequest(),
+    Example(),
     Home(),
     Home(),
     Home(),

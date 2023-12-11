@@ -17,12 +17,28 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Color(0xff008080)),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Color(0xff008080),
+            primary: Color(0xFF324B4B),
+            secondary: Color(0xFF95B1B0),
+            secondaryContainer: Color(0xFFD9D9D9),
+          ),
+          textTheme: TextTheme(
+              bodyMedium: GoogleFonts.inter(
+                  textStyle: TextStyle(
+                color: Color(0xFF324B4B),
+                fontSize: 20,
+              )),
+              bodySmall: GoogleFonts.inter(
+                  textStyle: TextStyle(
+                color: Color(0xFF324B4B),
+                fontSize: 16,
+              ))),
           scaffoldBackgroundColor: Colors.white,
           useMaterial3: true,
         ),
         home: Dashboard(title: "Warehouse")
         // home: Login()
-    );
+        );
   }
 }
