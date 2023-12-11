@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:whizware/widgets/input/input_password.dart';
+import 'package:whizware/widgets/input/input_text.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -38,52 +40,9 @@ class _LoginState extends State<Login> {
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 50),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Username",
-                    style: GoogleFonts.inter(
-                      textStyle: TextStyle(fontSize: 16),
-                      color: Color(0xff324B4B),
-                    ),
-                  ),
-                  TextField(
-                    decoration:
-                        InputDecoration(suffixIcon: Icon(Icons.person_outline)),
-                  ),
-                ],
-              ),
+              InputText("Username"),
               SizedBox(height: 50),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Password",
-                    style: GoogleFonts.inter(
-                      textStyle: TextStyle(fontSize: 16),
-                      color: Color(0xff324B4B),
-                    ),
-                  ),
-                  TextField(
-                    obscureText: hide,
-                    decoration: InputDecoration(
-                        suffixIcon: IconButton(
-                      onPressed: () {
-                        setState(() {
-                          hide = !hide;
-                        });
-                      },
-                      icon: Icon(
-                        hide
-                            ? Icons.visibility_off_outlined
-                            : Icons.visibility_outlined,
-                        size: 25,
-                      ),
-                    )),
-                  ),
-                ],
-              ),
+              InputPassword("Password"),
               SizedBox(height: 50),
               Center(
                 child: TextButton(
